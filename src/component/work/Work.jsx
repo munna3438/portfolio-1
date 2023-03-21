@@ -74,7 +74,7 @@ const Work = () => {
   };
 
   //circle logic
-  const [circle, setCircle] = useState("one");
+  const [circle, setCircle] = useState("zero");
 
   const scircle = (num) => {
     switch (num) {
