@@ -1,0 +1,152 @@
+.work {
+  background: #CD0048;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .slidecircle {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    display: flex;
+
+
+    span {
+      width: 20px;
+      height: 20px;
+      margin: 0 10px;
+      background: #fff;
+      cursor: pointer;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      align-items: center;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+
+    .circle {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: #CD0048;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .leftArrow {
+    width: 40px;
+    height: auto;
+    position: absolute;
+    cursor: pointer;
+    transform: rotate(180deg);
+    left: 5%;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+  }
+
+  .rightArrow {
+    width: 40px;
+    height: auto;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+
+  }
+
+
+
+  .slider {
+    height: 370px;
+    display: flex;
+    position: absolute;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+
+    .container {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .item {
+        width: 70%;
+        height: 100%;
+        border-radius: 15px;
+        background: #fff;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+
+        .left {
+          flex: 4;
+
+          .leftimg {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #F6B29D;
+            border-radius: 50%;
+            margin-bottom: 13px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+
+            img {
+              width: 70%;
+            }
+          }
+
+          .lefttext {
+            h3 {
+              font-size: 24px;
+              color: #CD0048;
+              margin-bottom: 10px;
+            }
+
+            a {
+              color: blueviolet;
+              font-weight: bold;
+            }
+          }
+        }
+
+        .right {
+          flex: 8;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          height: 100%;
+
+          img {
+            height: 100%;
+            transform: rotate(-10deg);
+            -webkit-transform: rotate(-10deg);
+            -moz-transform: rotate(-10deg);
+            -ms-transform: rotate(-10deg);
+            -o-transform: rotate(-10deg);
+          }
+        }
+      }
+    }
+  }
+}

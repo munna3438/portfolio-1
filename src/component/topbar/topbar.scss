@@ -1,0 +1,102 @@
+@import "../../index.scss";
+
+.topbar {
+    width: 100%;
+    height: 70px;
+    background: white;
+    color: $mainColor;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    overflow: hidden;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+
+    .wrapper {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            display: flex;
+            align-items: center;
+
+            .logo {
+                font-size: 40px;
+                color: inherit;
+                text-decoration: none;
+                font-family: 'Faustina', serif;
+            }
+
+            .left-text {
+                display: flex;
+                align-items: center;
+                margin: 0 8px;
+
+                .icon {
+                    font-size: 25px;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .rigth {
+            .hamburger {
+                width: 32px;
+                height: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+
+                span {
+                    width: 100%;
+                    height: 3px;
+                    background: $mainColor;
+                    transform-origin: left;
+                    transition: all 1s ease;
+                    -webkit-transition: all 1s ease;
+                    -moz-transition: all 1s ease;
+                    -ms-transition: all 1s ease;
+                    -o-transition: all 1s ease;
+                }
+            }
+        }
+    }
+
+    &.active {
+        background: $mainColor;
+        color: white;
+
+        .rigth {
+            .hamburger {
+                span:nth-child(1) {
+                    background: white;
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                    -moz-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    -o-transform: rotate(45deg);
+                }
+
+                span:nth-child(2) {
+                    opacity: 0;
+                }
+
+                span:nth-child(3) {
+                    background: white;
+                    transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                    -moz-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                }
+
+            }
+        }
+    }
+}
